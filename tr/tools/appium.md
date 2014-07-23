@@ -1,0 +1,3 @@
+# Appium
+
+Mobile test automation is becoming increasingly important. Appium (appium.io) is a test automation framework which can be used to test mobile web, mobile native and mobile hybrid applications on iOS and Android. At the core, Appium is a webserver that exposes a REST API, receiving connections from a client, listening for commands, executing those commands on a mobile device and responding with an HTTP response representing the result of the command execution. It allows tests to be written against multiple platforms (iOS, Android) using the same API. Appium is open source with easy set up using npm.

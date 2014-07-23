@@ -1,0 +1,2 @@
+# Real user monitoring
+With the proliferation of single-page JavaScript applications, we have found that slow Ajax calls, excessive DOM manipulation, and unexpected JavaScript errors in the browser can have a big impact on perceived website responsiveness. It is very useful to collect and aggregate this profiling information from real end-user’s browsers. Real user monitoring (newrelic.com/real-user-monitoring) provides early warning and diagnosis of production issues, and helps pinpoint them to a specific locality.

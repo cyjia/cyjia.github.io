@@ -1,0 +1,2 @@
+# REST without PUT
+In the last radar we talked about Capturing Explicit Domain Events, putting emphasis on recording the business-meaningful events that have triggered state transitions instead of just CRUD’ing entities. REST interfaces commonly use PUT to update resource state, however it’s often better to POST to record a new event resource which captures intent. REST without PUT has a side-benefit of separating command and query interfaces and forces consumers to allow for eventual consistency.

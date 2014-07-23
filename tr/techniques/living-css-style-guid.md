@@ -1,0 +1,3 @@
+# Living CSS style guide
+
+A living CSS style guide is a page on your site that uses your current CSS styles and acts as a reference for all the currently available visual elements and design patterns. This helps to tightly integrate design into your delivery process by promoting co-ownership of the UI and avoids duplication of styling across your application. Styling changes are visible in the guide immediately and changes propagate across your site from a central location. A sensible way to do this is with a well organized SASS/LESS file structure with semantically named elements that separates structure, aesthetics, and interaction.
