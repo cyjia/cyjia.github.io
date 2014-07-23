@@ -1,0 +1,3 @@
+# Provisioning testing
+
+Increasingly we are unbounded by our ability to procure and provision hardware. However with massive increase in flexibility this affords us, we have found that we are bounded by the scale and complexity of the software assets used to manage our virtual estates. Using techniques more familiar in the software development world such as TDD, BDD and CI offers an approach to managing this complexity and gives us the confidence to make changes to our infrastructure in a safe, repeatable and automatable manner. Provisioning testing tools, like rspec-puppet, Test Kitchen and serverspec, are available for most platforms.

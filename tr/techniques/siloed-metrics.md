@@ -1,0 +1,3 @@
+# Siloed metrics
+
+As more businesses move online we have noted a tendency to end up with siloed metrics. Specific tools are implemented to gather and display specific metrics: one tool for page-views and browser behavior, another for operational data and another to consolidate log messages. This leads to data silos and the need to swivel-chair integrate between the tools in order to gather business intelligence that is crucial to running the business. This is a tool-led split in the analytics domain that hurts the team’s ability to make decisions. A much better solution is to have a consolidated view of near-real time analytics using integrated dashboards displaying time-sensitive domain and team relevant information.

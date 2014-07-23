@@ -1,0 +1,3 @@
+# Treating velocity as productivity
+
+Of all the approaches that we might disagree with, equating velocity with productivity has become so prevalent that we felt it important to call it out in our hold ring. When properly used, velocity allows the incorporation of “yesterday’s weather” into the iteration planning process. Velocity is simply a capacity estimate for a given team at a given time. It can improve as a team gels or by fixing problems like technical debt or a flaky build server. However, like all metrics, it can be misused.  For example, over-zealous project managers attempt to insist on continual improvement of velocity. Treating velocity as productivity leads to unproductive team behaviors that optimize the metric at the expense of actual working software.
