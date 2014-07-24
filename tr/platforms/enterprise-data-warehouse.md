@@ -1,0 +1,3 @@
+# Enterprise Data Warehouse
+
+While centralized integration of data for analysis and reporting remains a good strategy, traditional Enterprise Data Warehouse (EDW) initiatives have a higher than 50% failure rate. Big up-front data modeling results in overbuilt warehouses that take years to deliver and are expensive to maintain. We are placing these old-style EDWs and techniques on hold in this edition of the radar. Instead, we advocate evolving towards an EDW. Test and learn by building small, valuable increments that are frequently released to production. Nontraditional tools and techniques can help, for example using a Data Vault schema design or even a NoSQL document store such as HDFS.

@@ -1,0 +1,3 @@
+# Reactive Extensions across languages
+
+# Reactive Programming deals with streams or values that change over time. Using elements of data flow, implicit concurrency and transparent event propagation, these techniques enable efficient handling of events on a large scale with a high degree of efficiency and low latency. In the previous radar, we mentioned Reactive Extensions in .NET due to the extensive work done by Microsoft in making Rx a core part of the .NET framework. Since then, with the introduction of the Reactive CoCoa library for Objective C, the Java port of Reactive Extensions, the React JavaScript library, the Elm language based on Haskell & the Flapjax JavaScript library, we are extending this blip to include Reactive Extensions across languages.

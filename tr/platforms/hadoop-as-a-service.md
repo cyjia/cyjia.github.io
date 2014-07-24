@@ -1,0 +1,3 @@
+# Hadoop as a Service
+
+We observe organizations that have piloted Hadoop successfully starting to consolidate their Hadoop infrastructure services into a centralized, managed platform before rolling it out across the enterprise. These **Hadoop-as-a-Service** platforms are characterized by the control tier that interfaces with and coordinates among different core Hadoop infrastructure components. The capabilities of the platform are usually exposed via higher-level abstractions to the enterprise. Such a managed platform gives organizations the ability to deploy processes, infrastructure and datasets in a fairly consistent way across the organization. These services are built in private data centers and public cloud infrastructure.
