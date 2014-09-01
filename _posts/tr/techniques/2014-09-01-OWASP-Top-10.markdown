@@ -1,0 +1,17 @@
+# OWASP Top 10
+
+Barely a week goes by without the IT industry being embarrassed by yet another high profile loss of data, leak of passwords, or breach of a supposedly secure system. There are good resources to help with making sure security gets treated as a first-class concern during software development and we need to stop ignoring them; the OWASP Top 10 is a good place to start.
+
+* OWASP Top 10 – 2013 (New) 
+Open Web Application Security Project
+========
+* A1 – Injection
+* A2 – Broken Authentication and Session Management
+* A3 – Cross-Site Scripting (XSS)
+* A4 – Insecure Direct Object References
+* A5 – Security Misconfiguration
+* A6 – Sensitive Data Exposure
+* A7 – Missing Function Level Access Control
+* A8 – Cross-Site Request Forgery (CSRF)
+* A9 – Using Known Vulnerable Components
+* A10 – Unvalidated Redirects and Forwards
