@@ -1,5 +1,5 @@
 window.App= Ember.Application.create
-  LOG_TRANSITIONS: true
+  LOG_TRANSITIONS: false 
 
 App.ApplicationAdapter = DS.LSAdapter.extend
-  namespace: 'tiger'
+  namespace: 'myblog'
