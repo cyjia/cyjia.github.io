@@ -1,3 +1,6 @@
 #  rubymonk
 
 RubyMonk.com[http://www.rubymonk.com]  is a free online ruby learning course.
+
+In RubyMonk courses:
+- It encourages you to use intuitiveness as ruby can almost be converted toEnglish.
