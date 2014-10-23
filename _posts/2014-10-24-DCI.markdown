@@ -1,0 +1,4 @@
+# DCI
+Data Context Interaction
+
+Object encapsulates data, but User behaviour is split across a bunch of objects, so it is hard for a programmer to map User behaviour to code. DCI calling capture User behaviour in code, make it first class citizen.
