@@ -13,7 +13,8 @@
     "ember-template-compiler": "~1.6.1",
     "grunt-ember-templates": "~0.4.21",
     "stylus": "~0.49.0",
-    "grunt-contrib-stylus": "~0.20.0"
+    "grunt-contrib-stylus": "~0.20.0",
+    "grunt-bower-concat": "~0.3.0"
   },
   "dependencies": {
     "coffee-script": "~1.8.0"

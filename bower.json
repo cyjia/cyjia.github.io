@@ -1,0 +1,27 @@
+{
+  "name": "myblog",
+  "version": "0.1.0",
+  "homepage": "https://github.com/cyjia/cyjia.github.io",
+  "authors": [
+    "cyjia <chaoyang_jia@163.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize": "https://github.com/necolas/normalize.css",
+    "ember": "~1.7.0",
+    "ember-data": "~0.0.14",
+    "ember-localstorage-adapter": "~0.4.0"
+  },
+  "resolutions": {
+    "ember": "~1.7.0",
+    "ember-data": ">= 1.0.0-beta.6"
+  }
+}
