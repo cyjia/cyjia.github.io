@@ -2,7 +2,6 @@
 
 * Federated authentication
 Authenticate using another site
-======
 
 * View
 * Body layout 
