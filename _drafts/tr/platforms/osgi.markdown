@@ -1,3 +1,0 @@
-# OSGI
-
-OSGi (Open Service Gateway initiative) is a specification that aims to remedy the lack of a module system for Java, allowing for dynamic reloading of components. While some projects (notably Eclipse) use OSGi successfully, other uses have exposed the hazards of adding abstractions to platforms never designed for them. Projects that rely on OSGi to define a component system quickly realize that it solves only a small part of the overall problem, and often adds its own accidental complexity to projects such as more complex builds. Most projects now either use old-fashioned JAR files or microservice architectures to manage components, and await the native solution in Java in the Jigsaw module specification.

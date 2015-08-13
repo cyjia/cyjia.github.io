@@ -1,3 +1,0 @@
-# Xamarin
-
-Among the various choices available for building cross-platform mobile apps, Xamarin offers a fairly unique toolset. It supports C# and F# as the primary language with bindings to platform specific SDKs and the Mono runtime environment that works across iOS, Android and Windows Phone. Applications are compiled to native code instead of the typical cross-platform approach that renders HTML-based UI in an embedded browser. This gives apps a more native look and feel. When using this toolset, it is imperative that the platform specific UI tier be separated from the rest of the tiers to ensure code reuse across different platforms. The application binary tends to be a bit bigger due to the runtime environment that is included.

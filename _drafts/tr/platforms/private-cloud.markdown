@@ -1,3 +1,0 @@
-# private cloud
-
-The need for physically storing data within nations or organizations has increased significantly in recent years. There is concern around sensitivity of information hosted in cloud environments. Organizations are looking into private cloud as an alternative when data that needs to be housed in close proximity with control over access and distributionn. Private cloud offers cloud infrastructure provisioned for exclusive use by a single organization with the following characteristics; on-demand self-service, broad network access, resource pooling, rapid elasticity and measured service.
