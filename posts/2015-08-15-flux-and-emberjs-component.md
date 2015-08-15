@@ -4,9 +4,9 @@
 
 Recently, I was in a project bulding a front-end component using EmberJS. I found the component in EmberJS has many similarities with Flux pattern.
 
+## Rols mapping
 Typically, a EmberJs component is composed of a view template and a component class. A view template describes the view structure, binding view elements to controller properties. A component class represents the state of the component, using computed property and observer to declare compute relationships. The component class also connects view action, with the help of EmberJS, a view action will can easily be connected with a function.
 
-## Rols mapping
 The roles in EmberJS component may not be the same as roles in Flux, but all responsibilities can be found in EmberJS.
 
 ### Create and send actions
