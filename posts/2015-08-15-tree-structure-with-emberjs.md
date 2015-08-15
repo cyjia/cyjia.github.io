@@ -24,7 +24,7 @@ export default Ember.Object.extend({
     }
 });
 
-```javascript
+```
 
 This implementation works well at first, but when lazy load feature added the code became crisp. We had to be careful with order of function calls. The call to `row.toogleExpandState()` intersects with `this.calculateRowCount()`, because calculating row count should take row expand state into account. When some object obersevs row state and retrives row count in its obersver's callback it will get a old value. A general work around is to wrap behaviour of a oberserver into `Ember.run` to ensure all states are synchronized, but the solution does not work with this case as `recalculateRowCount` is a function instead of a computed property, it executes only when called. Keep this in mind, we began try to express row count in computed property and let Ember runloop to manage execution order.
 
@@ -33,7 +33,7 @@ Our second implementation is to declare calculation relationship using computed 
 
 tree-row.js
 
-```
+```javascript
 export default Ember.Object.extend({
     expand: function(row) {
         row.toggleExpandState();
@@ -48,11 +48,12 @@ export default Ember.Object.extend({
     return root;
     })
 });
+
 ```
 
 group-row.js
 
-```
+```javascript
 export default Ember.Object.extend({
     toggleExpandState: function() {
         this.setProperty('isExpanded', true);
@@ -79,7 +80,7 @@ This implementation looks much clear, `rowCount` is declared as computed propert
 ## Final version
 group-row.js
 
-```
+```javascript
 export default Ember.Object.extend({
     toggleExpandState: function() {
         this.setProperty('isExpanded', true);
