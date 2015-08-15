@@ -1,6 +1,6 @@
 # Flux and EmberJS component
 
-[FLUX](https://facebook.github.io/flux) is a pattern that Facebook uses for building client-side web applications. It features with unidirectional data flow, roles of dispatcher, store, action, view.
+[Flux](https://facebook.github.io/flux) is a pattern that Facebook uses for building client-side web applications. It features with unidirectional data flow, roles of dispatcher, store, action, view.
 
 Recently, I was in a project bulding a front-end component using EmberJS. I found the component in EmberJS has many similarities with Flux pattern.
 
@@ -27,8 +27,11 @@ If the application state is very complicated, then EmberJS will be more suitable
 
 ## Controller view
 Flux mentioned controller view, which is a special kind of view listen for application state change event and trigger nested views to update themselves. React and EmberJS are both good at build composable components/views. For a single component its works well in Flux way, but when there are many components and their application state intersects in some way, it's still quite complicated to coordinate order of updating states and sending actions.
+
 For example, to manage a table of rows with parent and children relationship. Any time a parent row expanded, the total rows count should increase and the parent row state should be changed to expanded. We need to control the order of updating row state, updating row count, create new rows, updating table height, create new row views. The application state of a row view is part of the application state of the table. A generate rule is to update application state and then update view. But here, we need also to manage order of updating application state of multiple views, and the order of updating views should be acted in concert with order of updating application state.
+
 To solve all this complexity, a view at the top of view hierarchy could be selected as a controller view and bind to the overall application state. Any action in the view hierachy will result in the application state change in controller view, then controller view will fore its descendents views to update themselves. The appllication states for all views can depend or observer each other, and the _runloop_ will ensure they are calculated in right order.
+
 In the example above, we have two kind of views, naming _Table_, _Row_ and _Cell_. The application states are _TableRows_, _GroupRow_, and _CellContent_. The expand action triggers in view _Cell_, and then _GroupRow_ is updated to `expanded` state, and then _TableRows_ updates `rowsCount`, and then _Table_ view update itself and its descending views.
 
 ## Summary
