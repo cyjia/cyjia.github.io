@@ -10,7 +10,7 @@ title: 软件工艺设计师
 email: cyjia15@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   提高软件开发的工艺。
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://01doctor.com" # the base hostname & protocol for your site
 github_username:  cyjia
 
