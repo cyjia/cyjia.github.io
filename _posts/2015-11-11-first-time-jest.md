@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # 一次使用Jest的经历
 
 今天尝试基于Jest做React组件的测试。参考[Jest官网的例子](http://facebook.github.io/jest/docs/tutorial-react.html#content)。在尝试用自定义预处理器时遇到了一些困难。

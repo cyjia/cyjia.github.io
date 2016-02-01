@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Different interactive method for online coding
 
 1.CodeSchool

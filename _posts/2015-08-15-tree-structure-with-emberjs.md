@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Tree structure with EmberJS
 Ember has a rich library of Array, ArrayProxy, ArrayController, with which you can created computed property and observer depends on change of array element. But Ember does not have out of box support for tree data.
 

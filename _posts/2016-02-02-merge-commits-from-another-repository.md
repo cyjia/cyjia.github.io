@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Merge commits from another repository
 
 We have worked on a repository __Addon__ for a while and made about 30 commits. Now we want to port these commits to another repostiroy __Table__, which has some connection with __Addon__ in file structure and contents but doesn't share any git history. We chose `rebase -i` after several other tries, such as `cherry-pick`, `rebase --onto`.

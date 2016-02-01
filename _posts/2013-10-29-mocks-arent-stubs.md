@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Mocks Aren't Stubs
 
 (http://martinfowler.com/articles/mocksArentStubs.html "Origin from Martin Fowler's blog")

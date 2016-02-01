@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # One way to create singleton learned from Rails
 ## The code
 

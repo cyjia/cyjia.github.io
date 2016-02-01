@@ -1,3 +1,0 @@
-# Vagrant
-
-Command line wrapper to operate virtual machine. Has a lot of predefined base images. Good to use it in collaborative developing.

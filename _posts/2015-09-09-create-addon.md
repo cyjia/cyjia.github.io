@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # How to develop an addon?
 [ember-cli](http://www.ember-cli.com/extending) allows you extend it by creating your own addon. ember-cli site gives an addon example of createing a component, but an addon can do a lot of things. In following scenarios we might need to create an addon, they are:
 * encapsulating a bower package

@@ -1,4 +1,0 @@
-# My work list
-
--鼓励
-Rubymonk 鼓励人使用直觉去猜测对象的方法名称。

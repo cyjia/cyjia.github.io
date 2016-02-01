@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Flux and EmberJS component
 
 [Flux](https://facebook.github.io/flux) is a pattern that Facebook uses for building client-side web applications. It features with unidirectional data flow, roles of dispatcher, store, action, view.
