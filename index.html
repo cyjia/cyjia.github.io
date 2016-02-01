@@ -1,19 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>朝阳blog</title>
-  <style>
-    body {
-      font-family: "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    }
-    .content {
-    display: flex;
-    }
-  </style>
-</head>
-<body>
-  <p>今天是2015年12月19日，农历冬月初九。</p>
+---
+layout: default
+---
+<p>今天是2015年12月19日，农历冬月初九。</p>
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
   <div class="content">
   <section class="tags">
     <ul> <h2>标记</h2>
@@ -43,5 +49,4 @@
     </ul>
    </section>
   </div>
-</body>
-</html>
+</div>
