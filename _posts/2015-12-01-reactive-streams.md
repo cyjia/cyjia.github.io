@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 - [react with bacon](http://joshbassett.info/2014/reactive-uis-with-react-and-bacon/)
 - [reactive streams](http://www.aryweb.nl/2015/02/16/Reactive-React-using-reactive-streams/)
 - [async javascript with reactive extension by Matt Marenghi](https://www.youtube.com/watch?v=XRYN2xt11Ek)
