@@ -13,7 +13,7 @@ Our first implementation is to mannually notify tree rows count change.
 
 tree-row.js
 
-```javascript
+{% highlight javascript %}
 export default Ember.Object.extend({
     expand: function(row) {
         row.toogleExpandState();
@@ -27,7 +27,7 @@ export default Ember.Object.extend({
     }
 });
 
-```
+{% endhighlight %}
 
 This implementation works well at first, but when lazy load feature added the code became crisp. We had to be careful with order of function calls. The call to `row.toogleExpandState()` intersects with `this.calculateRowCount()`, because calculating row count should take row expand state into account. When some object obersevs row state and retrives row count in its obersver's callback it will get a old value. A general work around is to wrap behaviour of a oberserver into `Ember.run` to ensure all states are synchronized, but the solution does not work with this case as `recalculateRowCount` is a function instead of a computed property, it executes only when called. Keep this in mind, we began try to express row count in computed property and let Ember runloop to manage execution order.
 
@@ -36,7 +36,7 @@ Our second implementation is to declare calculation relationship using computed 
 
 tree-row.js
 
-```javascript
+{% highlight javascript %}
 export default Ember.Object.extend({
     expand: function(row) {
         row.toggleExpandState();
@@ -52,11 +52,11 @@ export default Ember.Object.extend({
     })
 });
 
-```
+{% endhighlight %}
 
 group-row.js
 
-```javascript
+{% highlight javascript %}
 export default Ember.Object.extend({
     toggleExpandState: function() {
         this.setProperty('isExpanded', true);
@@ -76,14 +76,14 @@ export default Ember.Object.extend({
     }).property('_childrenRows.length', '_childrenRows.@each.subRowsCount', '_childrenRows.@each.isExpanded')
 });
 
-```
+{% endhighlight %}
 
 This implementation looks much clear, `rowCount` is declared as computed property and it will be recalculated on get when expand state changes. But this implementation only works with two levels of tree data, the `rowCount` property in `tree-data.js` would not recalculate with three levels of tree data. We finally found the reason is that `_childrenRows.@each.subRowsCount` only propagates one level up. If `subRowsCount` change in one row of second level, then its paren row in first level will recalcuate on get, but the `subRowsCount` in root node will nevel recalculate on get unless `subRowsCount` in second level is calculated. Because of this, we come to our final implementation.
 
 ## Final version
 group-row.js
 
-```javascript
+{% highlight javascript %}
 export default Ember.Object.extend({
     toggleExpandState: function() {
         this.setProperty('isExpanded', true);
@@ -109,7 +109,7 @@ export default Ember.Object.extend({
         }
 });
 
-```
+{% endhighlight %}
 
 In the final implementation, whenever `subRowsCount` changed its parentRow will get notified, and then its parenRow will notify parent parent row until to the root row. Any observers watching `subRowsCount` on root row will get notified whenever expand state changes in each level of the tree.
 

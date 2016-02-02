@@ -20,7 +20,7 @@ Let's say, we have a bower package, which can provide cool effects, such as [toa
 
 To create an addon, we need at least two files `index.js` and `package.json`. In `index.js` you declare addon info and provide hook functions.
 
-```javascript
+{% highlight javascript %}
 
 'use strict';
 
@@ -38,12 +38,13 @@ module.exports = {
 
 };
 
-```
+{% endhighlight %}
+
 Explaination of each hook can be found [here](https://github.com/ember-cli/ember-cli/blob/master/ADDON_HOOKS.md). This addon used hook `included` to add `toastr.js` and `toastr.css` files.
 
 In `package.json`, you declare meta info.
 
-```json
+{% highlight json %}
 {
     "name": "ember-toastr",
     "description": "Ember wrapper for Toastr.js notifications",
@@ -51,14 +52,15 @@ In `package.json`, you declare meta info.
         "ember-addon"
     ]
 }
-```
+{% endhighlight %}
 
 Please note that `keywords` must include value _ember-addon_, otherwise Ember will not recognize this package as an addon.
 
 ## Doing custom transform
 Suppose we have many static content written in markdown, and we want to transform these files into handlebars files when doing Ember build.
 [ember-cli-coffeescript](https://github.com/kimroen/ember-cli-coffeescript) does similar job. Its `index.js` file registered a coffee processor for type `js`.
-```javascript
+
+{% highlight javascript %}
 'use strict';
 
 module.exports = {
@@ -74,11 +76,11 @@ module.exports = {
         })
     }
 }
-```
+{% endhighlight %}
 
 In our case, it's a little different, we want markdown transform happens before handlebars. So we use 'preprocessTree' hook.
 
-```javascript
+{% highlight javascript %}
     'use strict';
     var MarkdownProcessor = require('./lib/markdown-processor');
     module.exports = {
@@ -90,11 +92,11 @@ In our case, it's a little different, we want markdown transform happens before 
         }
     }
 
-```
+{% endhighlight %}
 
 The `markdown-processor` use [broccoli-filter](https://github.com/broccolijs/broccoli-filter) to filter out `.md` files and use [marked](https://github.com/chjj/marked) to transform them into `.hbs` files.
 
-```javascript
+{% highlight javascript %}
 'use strict';
 
 var Filter = require('broccoli-filter');
@@ -135,14 +137,14 @@ MarkdownProcessor.prototype.processString = function (markdownString) {
 };
 
 module.exports = MarkdownProcessor;
-```
+{% endhighlight %}
 
 ## Intercepting into development server
 This time we want to start a stub server in test and development environment. I know we can use mock server provided by ember-cli, but we do have strong reasons to define a stub server.
 
 We use hook 'serverMiddleware'.
 
-```javascript
+{% highlight javascript %}
 'use strict';
 module.exports = {
  name: 'ember-cli-stub-server',
@@ -161,19 +163,19 @@ module.exports = {
   }
 
 };
-```
+{% endhighlight %}
 
 ## Providing custom ember command
 In the last case, we want to provide custom command. [ember-cli-cordova](https://github.com/poetic/ember-cli-cordova) does similar things.We need to use hook `includedCommands` to return our commands.
 
-```javascript
+{% highlight javascript %}
 'use strict';
 module.exports = {
     includedCommands: function () {
         return commands;
     }
 }
-```
+{% endhighlight %}
 ## Reference
 * [ember-cli](http://www.ember-cli.com/extending)
 * [addon hooks](https://github.com/ember-cli/ember-cli/blob/master/ADDON_HOOKS.md)

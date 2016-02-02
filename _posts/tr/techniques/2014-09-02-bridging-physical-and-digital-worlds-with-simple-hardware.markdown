@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Bridging physical and digital worlds with simple hardware
 
 The reduction in cost, size, power consumption and simplicity of physical devices has led to an explosion in devices that open physical domains to software. These devices often contain little more than a sensor and a communication component

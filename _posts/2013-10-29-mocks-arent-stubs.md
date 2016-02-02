@@ -6,7 +6,7 @@ layout: default
 (http://martinfowler.com/articles/mocksArentStubs.html "Origin from Martin Fowler's blog")
 
 ## State verification
-'''
+{% highlight java %}
 public class OrderStateTester extends TestCase {
   private static String TALISKER = "Talisker";
   private static String HIGHLAND_PARK = "Highland Park";
@@ -28,11 +28,11 @@ public class OrderStateTester extends TestCase {
     assertFalse(order.isFilled());
     assertEquals(50, warehouse.getInventory(TALISKER));
   }
-'''
+{% endhighlight %}
 
 ## Behaviour verification
 
-'''
+{% highlight java %}
 public class OrderInteractionTester extends MockObjectTestCase {
   private static String TALISKER = "Talisker";
 
@@ -40,7 +40,7 @@ public class OrderInteractionTester extends MockObjectTestCase {
     //setup - data
     Order order = new Order(TALISKER, 50);
     Mock warehouseMock = new Mock(Warehouse.class);
-    
+
     //setup - expectations
     warehouseMock.expects(once()).method("hasInventory")
       .with(eq(TALISKER),eq(50))
@@ -51,16 +51,16 @@ public class OrderInteractionTester extends MockObjectTestCase {
 
     //exercise
     order.fill((Warehouse) warehouseMock.proxy());
-    
+
     //verify
     warehouseMock.verify();
     assertTrue(order.isFilled());
   }
 
   public void testFillingDoesNotRemoveIfNotEnoughInStock() {
-    Order order = new Order(TALISKER, 51);    
+    Order order = new Order(TALISKER, 51);
     Mock warehouse = mock(Warehouse.class);
-      
+
     warehouse.expects(once()).method("hasInventory")
       .withAnyArguments()
       .will(returnValue(false));
@@ -69,7 +69,7 @@ public class OrderInteractionTester extends MockObjectTestCase {
 
     assertFalse(order.isFilled());
   }
-'''
+{% endhighlight %}
 
 ## Classical and Mockist Testing
 > The classical TDD style is to use real objects if possible and a double if

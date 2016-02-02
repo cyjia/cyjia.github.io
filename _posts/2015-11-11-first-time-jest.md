@@ -75,8 +75,7 @@ title: 一次使用Jest的经历
 ## 附录A
 
 - `CheckboxWithLabel.js`
-
-```javascript
+{% highlight javascript %}
 
 import React from 'react';
 
@@ -109,11 +108,11 @@ class CheckboxWithLabel extends React.Component {
 
 export default CheckboxWithLabel;
 
-```
+{% endhighlight %}
 
 - `__tests__/CheckboxWithLabel-test.js`
 
-```javascript
+{% highlight javascript %}
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -144,11 +143,11 @@ describe('CheckboxWithLabel', () => {
 
 });
 
-```
+{% endhighlight %}
 
 - `preprocessor.js`
 
-```javascript
+{% highlight javascript %}
 
 var babel = require("babel-core");
 
@@ -174,11 +173,11 @@ module.exports = {
   }
 };
 
+{% endhighlight %}
 
-```
 - `package.json`
 
-```javascript
+{% highlight json %}
 
 {
   "dependencies": {
@@ -234,7 +233,7 @@ module.exports = {
   }
 }
 
-```
+{% endhighlight %}
 
 - `testsetup.js`
 
