@@ -6,30 +6,43 @@
 
     border: solid 1px;
     display: flex;
+    flex-direction: column;
     align-items: stretch;
     width: 800px;
     height: 500px;
 
     .symbols-panel {
-        flex: 1 20%;
+        flex: 1 40%;
         border: 1px solid;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
+        align-content: flex-start;
 
         li {
-            min-width: 1.5em;
-            min-height: 1.5em;
+            min-width: 3em;
+            min-height: 2em;
             display: flex;
             justify-content: center;
             align-items: center;
+
+            &:hover {
+                background-color: grey;
+                cursor: pointer;
+            }
+
         }
+
     }
 
     .input-area {
-        flex: 1 80%;
+        flex: 1 10%;
+        padding: 0.5em;
+        font-size: 1em;
+    }
 
+    .preview {
+        flex: 1 50%;
+        padding: 0.5em;
     }
 }

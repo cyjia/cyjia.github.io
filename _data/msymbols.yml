@@ -1,3 +1,75 @@
-- latex: \imath
+- latex: \times
 
-- latex: \jmath
+- latex: \div
+
+- latex: \pm
+
+- latex: \mp
+
+- latex: \cdot
+
+- latex: \star
+
+- latex: \sqrt{a}
+
+- latex: \sqrt[n]{ab}
+
+- latex: \log_{a}{b}
+
+- latex: \lg{ab}
+
+- latex: a^{b}
+
+- latex: a_{b}
+
+- latex: c_{a}^{b}
+
+# - latex: \widetilde{ab}
+
+# - latex: \widehat{ab}
+
+# - latex: \overleftarrow{ab}
+
+# - latex: \overrightarrow{ab}
+
+# - latex: \overbrace{ab}
+
+# - latex: \underbrace{ab}
+
+# - latex: \underline{ab}
+
+# - latex: \overline{ab}
+
+- latex: \frac{ab}{cd}
+
+- latex: \frac{\partial a}{\partial b}
+
+- latex: \frac{\text{d}x}{\text{d}y}
+
+- latex: \lim_{a \rightarrow b}
+
+- latex: \int_{a}^{b}
+
+- latex: \oint_a^b
+
+- latex: \prod_a^b
+
+- latex: \coprod_a^b
+
+- latex: \bigcap_a^b
+
+- latex: \bigcup_a^b
+
+- latex: \bigvee_a^b
+
+- latex: \bigwedge_a^b
+
+- latex: \bigsqcup_a^b
+
+- latex: \sum_a^b
+
+- latex: \left(\begin{array}{c}a\\ b\end{array}\right)
+
+- latex: \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+
+- latex: \begin{cases} a & x = 0\\b & x > 0 \end{cases}
