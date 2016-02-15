@@ -16,3 +16,8 @@ github_username:  cyjia
 
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-babel
+
+babel_js_extensions: 'js'

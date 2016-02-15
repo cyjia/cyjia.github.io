@@ -3,17 +3,30 @@
 
   {% include math-head.html %}
 
-  <body>
+    <body>
+        <div class="page-content">
+            <div class="wrapper">
+                {{ content }}
+            </div>
+        </div>
+        <div class="math-editor">
+            <ul class="symbols-panel">
+                {% for symbol in site.data.msymbols %}
+                <li class="equation" data-expr="{{symbol.latex}}"></li>
+                {% endfor %}
+            </ul>
+            <textarea class="input-area"></textarea>
+        </div>
+        <script type="text/javascript">
 
-    {% include header.html %}
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
+         // grab all elements in DOM with the class 'equation'
+         var tex = document.getElementsByClassName("equation");
 
-    {% include footer.html %}
-
+         // for each element, render the expression attribute
+         Array.prototype.forEach.call(tex, function(el) {
+             katex.render(el.getAttribute("data-expr"), el);
+         });
+        </script>
   </body>
 
 </html>

@@ -1,0 +1,35 @@
+.math-editor {
+
+    ul {
+        margin: 0;
+    }
+
+    border: solid 1px;
+    display: flex;
+    align-items: stretch;
+    width: 800px;
+    height: 500px;
+
+    .symbols-panel {
+        flex: 1 20%;
+        border: 1px solid;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        li {
+            min-width: 1.5em;
+            min-height: 1.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .input-area {
+        flex: 1 80%;
+
+    }
+}
