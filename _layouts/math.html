@@ -17,6 +17,9 @@
             </ul>
             <input tabIndex="1" class="input-area"></input>
             <div class="preview"></div>
+            <div class="actions">
+                <button>export</button>
+            </div>
        </div>
 
         <script type="text/javascript">
@@ -35,7 +38,6 @@
          inputEl.addEventListener('keyup', function preview(e) {
 
              var newExpr = inputEl.value;
-             console.log(newExpr);
              katex.render(newExpr, previewEl);
          });
         </script>
